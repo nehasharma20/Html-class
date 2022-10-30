@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student details registration form</title>
+    <style>
+        input:focus {
+          background-color: rgb(0, 255, 179);
+        }
+        input:read-only{
+          background-color: salmon;
+        }
+        input:read-write {
+          background-color: rgb(191, 255, 0);
+        }
+        input:valid {
+          background-color: yellow;
+        }
+        input:required {
+           background-color: rgb(0, 255, 34);
+        }
+        input:out-of-range {
+            border: 2px solid red;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+        input[type=text]:disabled {
+           background-color: azure;
+        }
+        </style>
+</head>
+<body>
+    <h1>Student Details</h1>
+    
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" name="username"
+                placeholder="Enter your username" readonly value="Neha"  />
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" name="age"
+              placeholder="Enter your age" min="18" max="21" value="22" />
+       <br>
+       Roll Number<input type="number" name="Roll_Number" placeholder="Enter your roll number"/>
+       <br>
+       <form action="/action_page.php">
+        <label for="DOB">DOB:</label>
+        <input type="date" id="date of birth" name="date of birth">
+      </form>
+      <br>         
+        <label for="emailid">Email:</label>
+        <input type="email" name="emailid"
+                placeholder="Enter your email-id" value="abc123@gmail.com" />
+       <br>          
+        <label for="Password">Password:</label>
+        <input type="password" name="Password"
+                placeholder="Enter your password" required/>
+       <br>
+       <td>Gender</td>
+       <td>
+       Male <input type="radio" name="Gender" value="Male" />
+       Female <input type="radio" name="Gender" value="Female" />
+       </td>
+       <br>
+       Country: <input type="text" disabled="disabled" value="India">
+       <br>
+       <td>Hobbies <br /></td>
+       <td>
+Drawing<input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+Singing<input type="checkbox" name="Hobby_Singing" value="Singing" />
+Dancing<input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+Sketching<input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+<br />
+Others<input type="checkbox" name="Hobby_Other" value="Other">
+<input type="text" name="Other_Hobby" maxlength="30" />
+</td>
+       
+    </form>
+</body>
+</html>
